@@ -1,0 +1,12 @@
+{{#with data}}
+{{#each preview}}
+<div class="post">
+    <strong class="post_title">{{title}}</strong>
+    <div class="post_info">
+        {{date}} by <span class="post_author">{{author}}</span>
+    </div>
+    <p class="post_decoration">{{description}}</p>
+    <a href="#">Continue reading</a>
+</div>
+{{/each}}
+{{/with}}

@@ -1,0 +1,28 @@
+{{#with data}}
+<div class="preview">
+    <div class="preview_header">
+        <span class="preview_date">{{date}}</span>
+        {{#each categories}}
+        <span class="preview_category preview_category_1">{{text}}</span>
+        {{/each}}
+        {{#each news}}
+        <h6>{{title}}</h6>
+        <p>{{date}}</p>
+        <p>{{author}}</p>
+        <p>{{description}}</p>
+        {{/each}}
+    </div>
+
+    <strong class="preview_title">{{title}}</strong>
+    <p class="preview_description">{{text}}
+    </p>
+    {{#each category}}
+    <div class="category_header">
+        <span class="category_id">{{id}}</span>
+        <span class="category_text">{{text}}</span>
+    </div>
+    {{/each}}
+    <a href="#">Continue reading</a>
+
+</div>
+{{/with}}
