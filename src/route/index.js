@@ -437,6 +437,8 @@ router.get('/template-3', function (req, res) {
         'First featurette heading. It’ll blow your mind.',
       text: 'Some great placeholder content for the first featurette here. Imagine some exciting prose here.',
       photo: 'https://picsum.photos/500/500',
+      left: '<',
+      right: '>',
     },
 
     blog: [
@@ -535,6 +537,7 @@ router.get('/template-3', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+// ================================================================
 // ================================================================
 
 // Підключаємо роутер до бек-енду
