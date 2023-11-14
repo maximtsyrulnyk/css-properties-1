@@ -26,56 +26,56 @@
             <div class="flex-container">
                 {{#each preview}}
                 {{> cardPreview class="flex-item" data=this}}
+
                 {{/each}}
             </div>
         </section>
         <main class="page_block">
             <div class="main">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <div class="list_header">
-                            <div>
-                                <h2 class="list_title">List of posts</h2>
-                            </div>
-                            <div>
-                                <div class="category_list">
-                                    {{#each categories}}
-                                    <button class="category_button">{{text}}</button>
-                                    {{/each}}
-                                </div>
+                <div class="col-12">
+                    <div class="list_header">
+                        <div>
+                            <h2 class="list_title">List of posts</h2>
+                        </div>
+                        <div>
+                            <div class="category_list">
+                                {{#each categories}}
+                                <button class="category_button">{{text}}</button>
+                                {{/each}}
                             </div>
                         </div>
-                    </div>
-                    <div class="col-7">
-                        <div class="list">
-                            {{#each news}}
-                            {{> cardPost data=this}}
-                            {{/each}}
-                        </div>
-                    </div>
-                    <div class="col-5">
-                        <aside class="list_aside">
-                            <div class="about">
-                                <h4 class="about_title">About</h4>
-                                <p class="about_text">{{about}}</p>
-                            </div>
-                            {{> linkList data=archive title="Archives"}}
-                            {{> linkList data=social title="Social"}}
-                        </aside>
                     </div>
                 </div>
+                <div class="col-7">
+                    <div class="list">
+                        {{#each news}}
+                        {{> cardPost data=this}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="col-5">
+                    <aside class="list_aside">
+                        <div class="about">
+                            <h4 class="about_title">About</h4>
+                            <p class="about_text">{{about}}</p>
+                        </div>
+                        {{> linkList data=archive title="Archives"}}
+                        {{> linkList data=social title="Social"}}
+                    </aside>
+                </div>
+
             </div>
         </main>
         <div class="page_block">
-            <footer class="row g-0 footer">
-                <div class="col-3">
+            <footer class="footer">
+                <div>
                     {{> logo}}
                     <span class="footer_copyright">
                         Copyright 2023-2024
                     </span>
                 </div>
                 {{#each footer}}
-                <div class="col-3">
+                <div>
                     <span class="footer_title">
                         {{title}}
                         {{>nav list=links isVertical=true}}
