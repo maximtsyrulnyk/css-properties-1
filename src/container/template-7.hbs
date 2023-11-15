@@ -1,0 +1,33 @@
+{{#with page}}
+<h1>{{title}}</h1>
+{{/with}}
+{{#with header}}
+{{brandName}}
+{{userOnline}}
+{{#with ad}}
+{{text}}
+{{url}}
+{{/with}}
+{{#each links}}
+<a href="{{url}}">{{text}}</a>
+{{/each}}
+{{/with}}
+{{>hero}}
+{{#with about}}
+<h1>{{heading}}</h1>
+<p>{{info}}</p>
+{{/with}}
+{{#with articles}}
+<p>{{id}}</p>
+<img src="{{photo}}" {{#if isNew}} {{isNew}}{{/if}} alt="{{name}}">
+<p>{{description}}</p>
+{{/with}}
+<footer>
+    {{#with footer}}
+    {{copyright}}
+    {{#each pages}}
+    {{path}}
+    {{name}}
+    {{/each}}
+    {{/with}}
+</footer>
