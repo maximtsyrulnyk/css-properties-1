@@ -1,3 +1,39 @@
+@keyframes fly {
+  from {
+    top: 0;
+    left: 0;
+
+    background: red;
+  }
+
+  25% {
+    top: 500px;
+    left: 500px;
+
+    background: blue;
+
+    width: 100px;
+  }
+  50% {
+    left: 0;
+
+    background: yellow;
+    width: 0px;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+    background: purple;
+  }
+}
+:root {
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+}
 .page {
   background: #ffffff;
   padding: 0 15px;
@@ -46,14 +82,17 @@
 }
 
 .nav_link {
-  color: #343a40;
-  font-size: 16px;
+  color: var(--color-text);
+  font-size: var(--size-d);
   text-decoration: none;
+  line-height: 100%;
+  transition-property: color;
+  transition-duration: 1s;
 }
 
 .nav_link:hover {
   text-decoration: underline;
-  color: blue;
+  color: var(--color-primary);
 }
 
 .nav_vertical > .nav_link {
@@ -136,9 +175,19 @@
   background: #007bff;
   border-radius: 4px;
   text-align: center;
+  transition: opacity 1s, background-color 1s;
+
+  transition-property: opacity, background-color, color;
+  transition-duration: 1s;
+}
+.card_button {
+  color: var(--color-white);
+  background-color: var(--color-primary);
 }
 .button:hover {
-  background: #3195ff;
+  opacity: 0.7;
+  background-color: yellow;
+  color: red;
 }
 
 .preview {
@@ -400,8 +449,8 @@
 }
 
 .modal {
-  position: sticky;
-  top: 24px;
+  position: fixed;
+  top: 200px;
   left: 200px;
 
   /* height: 100px; */
@@ -412,8 +461,35 @@
   border-radius: 24px;
   line-height: 150%;
   z-index: 2;
+
+  /* transition-property: top;
+  transition-duration: 3s;
+  transition-timing-function: cubic-bezier(
+    -0.6 -0.04 0.98 0.335
+  );
+  transition-delay: 3s; */
 }
 
+.modal {
+  animation-name: fly;
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(
+    0.92,
+    0,
+    0.91,
+    0.66
+  );
+  animation-delay: 3s;
+
+  /* animation-iteration-count: infinite; */
+
+  animation-direction: alternate;
+
+  animation-fill-mode: both;
+}
+body:hover .modal {
+  animation-play-state: paused;
+}
 .modal_image {
   height: 600px;
   width: 700px;
