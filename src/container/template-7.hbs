@@ -1,33 +1,88 @@
-{{#with page}}
-<h1>{{title}}</h1>
-{{/with}}
-{{#with header}}
-{{brandName}}
-{{userOnline}}
-{{#with ad}}
-{{text}}
-{{url}}
-{{/with}}
-{{#each links}}
-<a href="{{url}}">{{text}}</a>
-{{/each}}
-{{/with}}
-{{>hero}}
-{{#with about}}
-<h1>{{heading}}</h1>
-<p>{{info}}</p>
-{{/with}}
-{{#with articles}}
-<p>{{id}}</p>
-<img src="{{photo}}" {{#if isNew}} {{isNew}}{{/if}} alt="{{name}}">
-<p>{{description}}</p>
-{{/with}}
-<footer>
-    {{#with footer}}
-    {{copyright}}
-    {{#each pages}}
-    {{path}}
-    {{name}}
-    {{/each}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{#with page}}<title>{{title}}</title> {{/with}}
+
+    <!-- Add your CSS link or include the styles here -->
+    <link rel="stylesheet" href="public\css\template-7.css">
+</head>
+
+<body>
+
+    {{#with header}}
+    <div class="header_dark">
+        <div class="header_dark_links">
+            <span class="header_dark_links_brandName">{{brandName}}</span>
+
+            <div class="header_dark_link_list">
+                {{#each links}}
+                <a href="{{url}}">{{text}}</a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="header_dark_info">
+            <div class="ad">
+                <span>Ad</span>
+                {{#with ad}}
+                <p>{{text}}</p>: {{url}}
+                {{/with}}
+            </div>
+            <div class="users">
+                <p>Users online: {{userOnline}}</p>
+            </div>
+        </div>
+    </div>
     {{/with}}
-</footer>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class=" container">
+
+            <h1>{{hero.title}}</h1>
+            <p>{{hero.description}}</p>
+            <a href="{{hero.button.url}}" class="button">{{hero.button.text}}</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>{{about.heading}}</h2>
+            <p>{{about.info}}</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles">
+        <div class="d-flex container">
+            {{#each articles}}
+            <div class="article">
+                <img src="{{photo}}" alt="{{name}}">
+                <h3>{{name}}</h3>
+                <p>{{description}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        {{#with footer}}
+        <div class="container">
+            <p class="footer-copyright">{{copyright}}</p>
+            <div class="footer-pages">
+                {{#each pages}}
+                <a href="{{path}}">{{name}}</a>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+    </footer>
+
+
+
+</body>
+
+</html>

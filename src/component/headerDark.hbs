@@ -1,0 +1,25 @@
+{{#with header}}
+<div class="header_dark">
+    <div class="header_dark_links">
+        <span class="header_dark_links_brandName">
+            {{brandName}}
+        </span>
+        <div class="header_dark_link_list">
+            {{#each links}}
+            <a href="{{url}}">{{text}}</a>
+            {{/each}}
+        </div>
+    </div>
+    <div class="header_dark_info">
+        <div class="ad">
+            <span>Ad</span>
+            {{#with ad}}
+            <p>{{text}}</p>: {{url}}
+            {{/with}}
+        </div>
+        <div class="users">
+            <p>Users online: {{userOnline}}</p>
+        </div>
+    </div>
+</div>
+{{/with}}
