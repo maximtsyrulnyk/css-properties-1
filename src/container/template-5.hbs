@@ -1,0 +1,48 @@
+<main class="main">
+    {{#with messages}}
+    <div class="messages">
+        <h1 class="message_title">
+            {{title}}
+        </h1>
+        {{#each list}}
+        <div class="msg">
+            <strong class="msg_name">
+                {{name}}
+            </strong>
+            <p class="msg_text">
+                {{message}}
+            </p>
+            <span class="msg_day">{{day}}</span>
+        </div>
+        {{/each}}
+        <a href="#" class="messages_link">All messages</a>
+    </div>
+    {{/with}}
+    {{#each advantages}}
+    <div class="advantage">
+        <strong>{{title}}</strong>
+        <p>{{text}}</p>
+    </div>
+    {{/each}}
+</main>
+<div class="advantages">
+    {{#each advantages}}
+    <div>
+        <strong>{{title}}</strong>
+        <p>{{text}}</p>
+    </div>
+    {{/each}}
+</div>
+<!-- Footer -->
+<footer>
+    <div>
+        {{>logo}}
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div>
+        <span class="footer_title">{{title}}</span>
+        {{>nav list=links isVertical=true}}
+    </div>
+    {{/each}}
+</footer>
