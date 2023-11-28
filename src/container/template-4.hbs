@@ -1,0 +1,61 @@
+{{#with page}}
+<h1 class="h1">{{title}}</h1>
+{{/with}}
+{{#each header}}
+
+<header>
+    <a href="{{url}}">{{text}}</a>
+
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{>nav list=header}}
+        </div>
+    </nav>
+</header>
+{{/each}}
+
+{{#with main}}
+<main>
+    <section>
+        <h1>{{heading}}</h1>
+        <p>{{description}}</p>
+        <img src="{{image}}" alt="Main Image">
+        <a href="{{href}}">{{button}}</a>
+    </section>
+
+    <section>
+        {{#each featured}}
+        <article>
+            <h2>{{heading}}</h2>
+            <p>{{info}}</p>
+            <img src="{{photo}}" alt="Featured Image">
+            <a href="{{linkUrl}}">{{linkText}}</a>
+        </article>
+        {{/each}}
+    </section>
+</main>
+{{/with}}
+<section>
+    {{#each actions}}
+    <article>
+        <h2>{{heading}}</h2>
+        <p>{{text}}</p>
+        <a href="{{url}}">{{url}}</a>
+    </article>
+    {{/each}}
+</section>
+<footer>
+    {{#each footer}}
+    <section>
+        <h2>{{title}}</h2>
+        <ul>
+            {{#each links}}
+            <li><a href="{{url}}">{{text}}</a></li>
+            {{/each}}
+        </ul>
+    </section>
+    {{/each}}
+</footer>
+</body>
+
+</html>
