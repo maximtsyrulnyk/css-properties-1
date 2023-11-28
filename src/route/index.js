@@ -417,6 +417,8 @@ router.get('/template-3', function (req, res) {
       title: 'Example Page',
     },
 
+    layout: 'template-3',
+
     header: [
       {
         text: 'Features',

@@ -525,7 +525,6 @@
   figure,
   footer,
   form,
-  h1,
   h2,
   h3,
   h4,
@@ -548,7 +547,6 @@
   object,
   ol,
   output,
-  p,
   pre,
   q,
   ruby,
@@ -575,7 +573,6 @@
   ul,
   var,
   video {
-    margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
