@@ -1,29 +1,43 @@
+<header class="header">
+    <a href="#test">{{> logo}}</a>
+    <nav class="header_nav">
+        <div class="header_nav_right">
+            {{>nav list=header}}
+        </div>
+    </nav>
+</header>
 <main class="main">
     {{#with messages}}
     <div class="messages">
-        <h1 class="message_title">
-            {{title}}
-        </h1>
+        <h1 class="messages_title">{{title}}</h1>
         {{#each list}}
         <div class="msg">
-            <strong class="msg_name">
-                {{name}}
-            </strong>
-            <p class="msg_text">
-                {{message}}
-            </p>
+            <strong class="msg_name">{{name}}</strong>
+            <p class="msg_text">{{message}}</p>
             <span class="msg_day">{{day}}</span>
         </div>
         {{/each}}
         <a href="#" class="messages_link">All messages</a>
     </div>
     {{/with}}
-    {{#each advantages}}
-    <div class="advantage">
-        <strong>{{title}}</strong>
-        <p>{{text}}</p>
-    </div>
-    {{/each}}
+    {{#with form}}
+    <form class="form">
+        <h2 class="form_title">{{title}}</h2>
+        <div class="form_input_list">
+            {{#each inputs}}
+            <input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}"
+                id="form-input-{{id}}">
+            {{/each}}
+        </div>
+        <div class="form_checkbox">
+            <input type="checkbox" name="{{checkbox.name}} " id="{{checkbox.name}} ">
+            <div></div>
+            <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+        </div>
+        <button type="submit" class="form_button">{{button}}</button>
+        <h2 class="form_info">{{info}}</h2>
+    </form>
+    {{/with}}
 </main>
 <div class="advantages">
     {{#each advantages}}
@@ -34,7 +48,7 @@
     {{/each}}
 </div>
 <!-- Footer -->
-<footer>
+<footer class="footer" id="test">
     <div>
         {{>logo}}
         <span class="footer_copyright">Copyright 2023-2024</span>
