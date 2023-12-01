@@ -1,0 +1,151 @@
+@layer component, variant;
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('/font/HelveticaNeueBold.ttf');
+}
+body {
+  font-family: 'HelveticaNeueBold', sans-serif;
+  background-color: var(--color-white);
+}
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #611f69;
+
+  --page-width-big: 1260px;
+  --page-width-medium: 1000px;
+  --page-width-small: 700px;
+
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 20px;
+  --spacing-5: 24px;
+  --spacing-6: 28px;
+  --spacing-7: 32px;
+  --spacing-8: 36px;
+
+  --size-1: 14px;
+  --size-2: 18px;
+  --size-3: 22px;
+
+  --radius-1: 4px;
+  --opacity-1: 0.7;
+  --opacity-2: 0.3;
+  --transition-1: 0.7s;
+}
+
+.page {
+  display: grid;
+}
+
+.page_section {
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  width: 100%;
+  padding: var(--spacing-3);
+}
+
+@media all and (1260px<= width) {
+  .page_content {
+    max-width: var(--page-width-big);
+  }
+}
+@media all and (1000px<= width < 1260px) {
+  .page_content {
+    max-width: var(--page-width-medium);
+  }
+}
+@media all and (width < 1000px) {
+  .page_content {
+    max-width: var(--page-width-small);
+  }
+}
+
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+  height: 60vh;
+  min-height: 500px;
+}
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.hero_content {
+    display: grid;
+    gap: var(--spacing-5);
+    max-width: 425px;
+    color: var(--color-black);
+    position: relative;
+
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: var(--spacing-8);
+  row-gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+.hero_image {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hero_label {
+  font-size: var(--size-1);
+}
+
+.hero_title {
+  font-size: 50px;
+}
+
+.hero_info {
+  font-size: var(--size-2);
+}
+.hero_buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5);
+}
+
+@layer component {
+  .button {
+    text-decoration: none;
+    color: var(--color-black);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: opacity var(--transition-1);
+  }
+  .button:hover {
+    opacity: :var(--opacity-1);
+    cursor: pointer;
+  }
+  .button:active {
+    opacity: var(--opacity-2);
+  }
+}
+@layer variant {
+  .button_primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+  }
+  .button_secondary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    border-width: 2px;
+  }
+}
