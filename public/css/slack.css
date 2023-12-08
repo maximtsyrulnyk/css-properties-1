@@ -284,5 +284,8 @@ body {
       grid-template-columns: 1fr;
       gap: var(--spacing-2);
     }
+    .features_grid_3 {
+      grid-template-columns: 1fr;
+    }
   }
 }
