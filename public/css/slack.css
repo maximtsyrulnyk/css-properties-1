@@ -32,7 +32,10 @@
     display: flex;
     justify-content: center;
   }
-
+  .page_section_continue {
+    display: flex;
+    justify-content: center;
+  }
   .icon {
     display: block;
     background-repeat: no-repeat;
@@ -48,6 +51,9 @@
   .feat_icon {
     height: 48px;
     width: 48px;
+    background-image: url('/img/features.png');
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 
   .icon_arrow {
@@ -275,7 +281,7 @@ body {
     }
   }
 
-  @media all and (width < 400px) {
+  @media all and (width) {
     .features_grid_4 {
       grid-template-columns: 1fr;
     }
