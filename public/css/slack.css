@@ -51,7 +51,6 @@
   .feat_icon {
     height: 48px;
     width: 48px;
-    background-image: url('/img/features.png');
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -133,10 +132,6 @@ body {
     justify-content: center;
     gap: 200px;
     min-height: 600px;
-
-    background-image: url('/img/features.png');
-    background-repeat: no-repeat;
-    background-position: top right;
   }
 
   .hero {
@@ -190,11 +185,9 @@ body {
   .features_section {
     padding-top: 150px;
     padding-bottom: 150px;
-
     display: grid;
     gap: var(--spacing-5);
-
-    background-image: url('/img/features.png');
+    background-image: url('/img/brands/features.png');
     background-repeat: no-repeat;
     background-position: top right;
   }
@@ -230,6 +223,14 @@ body {
 
   .features_grid_4 > .feat_card:first-of-type {
     grid-row: 1 /3;
+  }
+  .page_continue {
+    padding-bottom: 150px;
+    display: grid;
+    gap: var(--spacing-5);
+    background-image: url('/img/img-what-you-need.png');
+    background-repeat: no-repeat;
+    background-position: top left;
   }
 }
 
@@ -290,21 +291,20 @@ body {
       grid-template-columns: 1fr;
       gap: var(--spacing-2);
     }
-    .features_grid_3 {
+    .features_grid_4 {
       grid-template-columns: 1fr;
     }
-    .features_grid_3 {
+    .features_grid_4 {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 2fr;
       gap: var(--spacing-3);
     }
-    .features_grid_3 > .feat_card:first-of-type {
-      grid-row: 1 /3;
+    .features_grid_4 > .feat_card:first-of-type {
+      grid-row: 1 / 3;
     }
-    .feat_card_column {
-      display: flex;
-      flex-direction: column;
+    .features_grid_4 > .feat_card:nth-of-type(2) {
+      grid-row: 1 / 3;
     }
   }
 }
