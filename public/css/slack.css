@@ -197,12 +197,17 @@ body {
   .features_title {
     font-size: var(--size-6);
   }
-
+  .features_title_continue {
+    font-size: var(--size-6);
+  }
   .features_description {
     font-size: var(--size-2);
     max-width: 520px;
   }
-
+  .features_description_continue {
+    font-size: var(--size-2);
+    max-width: 520px;
+  }
   .feat_card {
     padding: var(--spacing-3);
     background-color: var(--color-white);
@@ -211,7 +216,17 @@ body {
     font-size: var(--size-2);
     grid-template-columns: min-content min-content 1fr min-content;
   }
-
+  .feat_card_continue {
+  }
+  @layer component_continue {
+    .icon {
+      display: block;
+      height: 48px;
+      width: 48px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
   .feat_link {
     justify-self: flex-end;
   }
@@ -233,6 +248,19 @@ body {
     background-image: url('/img/img-what-you-need.png');
     background-repeat: no-repeat;
     background-position: top left;
+  }
+  .features_section_continue {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: grid;
+    gap: var(--spacing-5);
+  }
+  @layer variant {
+    .page_section_continue_light {
+      background-color: var(--color-light);
+    }
+  }
+  .features_title_continue {
   }
 }
 
