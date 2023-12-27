@@ -193,7 +193,13 @@ body {
     background-position: top right;
     margin: 0 auto;
   }
-
+  .features_section_continue {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  .page_section_continue_light {
+    background-color: var(--color-light);
+  }
   .features_title {
     font-size: var(--size-6);
   }
@@ -204,10 +210,7 @@ body {
     font-size: var(--size-2);
     max-width: 520px;
   }
-  .features_description_continue {
-    font-size: var(--size-2);
-    max-width: 520px;
-  }
+
   .feat_card {
     padding: var(--spacing-3);
     background-color: var(--color-white);
@@ -254,6 +257,10 @@ body {
     padding-bottom: 150px;
     display: grid;
     gap: var(--spacing-5);
+  }
+  .icon_continue {
+    height: 48px;
+    width: 48px;
   }
   @layer variant {
     .page_section_continue_light {
