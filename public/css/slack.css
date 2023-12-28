@@ -193,9 +193,10 @@ body {
     background-position: top right;
     margin: 0 auto;
   }
-  .features_section_continue {
+  .features_section_3 {
     padding-top: 150px;
     padding-bottom: 150px;
+    background-image: url('/img/brands/img-what-you-need.png');
   }
   .page_section_continue_light {
     background-color: var(--color-light);
@@ -252,7 +253,7 @@ body {
     background-repeat: no-repeat;
     background-position: top right;
   }
-  .features_section_continue {
+  .features_section_3 {
     padding-top: 150px;
     padding-bottom: 150px;
     display: grid;
@@ -267,7 +268,7 @@ body {
       background-color: var(--color-light);
     }
   }
-  .features_title_continue {
+  .features_title_3 {
   }
 }
 
