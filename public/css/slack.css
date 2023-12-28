@@ -248,9 +248,9 @@ body {
     padding-bottom: 150px;
     display: grid;
     gap: var(--spacing-5);
-    background-image: url('/img/img-what-you-need.png');
+    background-image: url('//svg//feature//img-what-you-need.svg');
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: top right;
   }
   .features_section_continue {
     padding-top: 150px;
