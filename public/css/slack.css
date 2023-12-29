@@ -282,6 +282,7 @@ body {
     height: 48px;
     width: 48px;
   }
+
   @layer variant {
     .page_section_continue_light {
       background-color: var(--color-light);
@@ -290,7 +291,13 @@ body {
   .features_title_3 {
   }
 }
-
+.container {
+  display: flex;
+}
+.text {
+  display: flex;
+  grid-template-columns: auto;
+}
 @layer adaptive {
   @media all and (1260px<=width) {
     .page_content {
