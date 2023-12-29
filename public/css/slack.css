@@ -123,8 +123,9 @@ body {
   }
 
   .page_content {
-    width: 100%;
+    width: 90%;
     padding: var(--spacing-3);
+    display: grid;
   }
 
   .hero_section {
@@ -182,7 +183,13 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-5);
   }
-
+  .hero_section_continue {
+    display: grid;
+  }
+  .hero_continue {
+    display: grid;
+    gap: var(--spacing-4);
+  }
   .features_section {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -196,7 +203,12 @@ body {
   .features_section_3 {
     padding-top: 150px;
     padding-bottom: 150px;
+    display: grid;
+    gap: var(--spacing-5);
     background-image: url('/img/brands/img-what-you-need.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin: 0 auto;
   }
   .page_section_continue_light {
     background-color: var(--color-light);
@@ -221,6 +233,12 @@ body {
     grid-template-columns: min-content min-content 1fr min-content;
   }
   .feat_card_continue {
+    padding: var(--spacing-3);
+    background-color: var(--color-white);
+    display: grid;
+    gap: var(--spacing-3);
+    font-size: var(--size-2);
+    grid-template-columns: min-content min-content 1fr min-content;
   }
   @layer component_continue {
     .icon {
@@ -246,9 +264,10 @@ body {
     grid-row: 1 /3;
   }
   .page_continue {
-    padding-bottom: 150px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     display: grid;
-    gap: var(--spacing-5);
+    gap: var(--spacing-2);
     background-image: url('//svg//feature//img-what-you-need.svg');
     background-repeat: no-repeat;
     background-position: top right;
