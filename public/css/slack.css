@@ -296,7 +296,8 @@ body {
 }
 .text {
   display: flex;
-  grid-template-columns: auto;
+  /* grid-template-columns: auto; */
+  flex-direction: column;
 }
 @layer adaptive {
   @media all and (1260px<=width) {
