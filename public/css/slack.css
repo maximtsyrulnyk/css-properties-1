@@ -232,6 +232,15 @@ body {
     font-size: var(--size-2);
     grid-template-columns: min-content min-content 1fr min-content;
   }
+  .new_cards {
+    padding: var(--spacing-3);
+    background-color: var(--color-white);
+    display: flex;
+    gap: var(--spacing-3);
+    font-size: var(--size-2);
+    flex-direction: column;
+  }
+
   .feat_card_continue {
     padding: var(--spacing-3);
     background-color: var(--color-white);
