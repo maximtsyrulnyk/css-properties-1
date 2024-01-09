@@ -249,6 +249,19 @@ body {
     font-size: var(--size-2);
     grid-template-columns: min-content min-content 1fr min-content;
   }
+  .slack_card {
+    width: 285px;
+    height: 420px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .slack_card img {
+    width: 285px;
+    height: 208px;
+  }
+
   @layer component_continue {
     .icon {
       display: block;
