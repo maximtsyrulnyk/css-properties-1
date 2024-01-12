@@ -271,6 +271,9 @@ body {
   .analytic--blue {
     background-color: var(--color-blue-light);
   }
+  .analytic--purple {
+    background-color: var(--color-purple-light);
+  }
 }
 @layer adaptive {
   @media all and (width <= 1000px) {
