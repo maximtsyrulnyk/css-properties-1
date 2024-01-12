@@ -15,16 +15,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
     <link rel="manifest" href="/fav/site.webmanifest">
     <link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#ffffff">
-
+    <meta name='viewport'
+        content='viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
     <link href='css/normalize.css' rel='stylesheet' />
-
-
-
     <link href='css/dashboard.css' rel='stylesheet' />
+    {{!--
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no"> --}}
 </head>
 
 <body>
@@ -38,24 +37,22 @@
                     <span class="icon nav-button__icon" style="background-image: url('/svg/nav/home.svg')"></span>
                     <span class="text text--light">Home</span>
                 </a>
-                <div class="relative click">
-                    <div class="field field--select">
-                        <span class="text text--light">Choose...</span>
-                    </div>
-                    <select class="field__select">
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="hamster">Hamster</option>
-                        <option value="parrot">Parrot</option>
-                        <option value="spider">Spider</option>
-                    </select>
-                </div>
+                <a href='#' class='nav-button click'>
+                    <span class='icon nav-button__icon'
+                        style="background-image: url('/svg/dashboard/sidebar/orders.svg')"></span>
+                    <span class='text text--light'>Orders</span>
+                </a>
+                <a href='#' class='nav-button click'>
+                    <span class='icon nav-button__icon'
+                        style="background-image: url('/svg/dashboard/sidebar/products.svg')"></span>
+                    <span class='text text--light'>Products</span>
+                </a>
             </nav>
         </aside>
         <header class="header">
             <div class="layout header__content text--small">
                 <div class="header__search relative">
-                    <input type="text" placeholder="Search" class="text field field--header">
+                    <input type="text" placeholder="Search" class='field field--header'>
                     <span class="icon header__icon-search"
                         style="background-image: url('/svg/header/search.svg')"></span>
                     <span class="icon icon--header-settings icon--button icon--color-blue click"
@@ -85,21 +82,49 @@
                             <div class="text text--small text--gray">Total Order</div>
                         </div>
                     </div>
-
-                    <div class="analytic analytic--double analytic--blue">
-                        <span class="icon analytic__button icon--button icon--color-blue click"
-                            style="background-image: url('/svg/analytic/earning.svg')"></span>
-                        <div class="relative vertical vertical--small">
-                            <div class="analytic__title text text--light">$203k</div>
-                            <div class="text text--small text--gray">Total Income</div>
+                    <div style="display: flex;">
+                        <div class="analytic analytic--double analytic--blue">
+                            <span class="icon analytic__button icon--button icon--color-blue click"
+                                style="background-image: url('/svg/analytic/earning.svg')"></span>
+                            <div class="relative vertical vertical--small">
+                                <div class="analytic__title text text--light">$203k</div>
+                                <div class="text text--small text--gray">Total Income</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="analytic">
-                        <div>test</div>
-                        <div>test</div>
-                        <div>test</div>
+
+                    <div style="display: flex;">
+                        <div class="analytic analytic--double analytic--blue">
+                            <span class="icon analytic__button icon--button icon--color-blue click"
+                                style="background-image: url('/svg/analytic/earning.svg')"></span>
+                            <div class="relative vertical vertical--small">
+                                <div class="analytic__title text text--light">$203k</div>
+                                <div class="text text--small text--gray">Total Income</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
+                <div class='header__options'>
+                    <div class="col-12">
+                        <div class="form-label">
+                            Payment
+                        </div>
+                        <hr>
+                        <div class="form-check">
+                            <label class="form-check-label">Credit card</label>
+                            <input name="payment" type="radio" class="form-check-input">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">Debit card</label>
+                            <input name="payment" type="radio" class="form-check-input">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">PayPal</label>
+                            <input name="payment" type="radio" class="form-check-input">
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </main>
