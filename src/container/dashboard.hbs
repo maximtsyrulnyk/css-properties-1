@@ -30,24 +30,66 @@
 <body>
 
     <div class="page page--dashboard">
-        <aside class="page__aside aside vertical">
-            <div class="aside__logo">
+        <aside class="page__aside aside vertical vertical--big">
+            <div class="text aside__logo">
                 Sidebar
             </div>
             <nav class="vertical vertical--small"><a href="#" class="nav-button nav-button--active click">
                     <span class="icon nav-button__icon" style="background-image: url('/svg/nav/home.svg')"></span>
                     <span class="text text--light">Home</span>
-                </a></nav>
+                </a>
+                <div class="relative click">
+                    <div class="field field--select">
+                        <span class="text text--light">Choose...</span>
+                    </div>
+                    <select class="field__select">
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="parrot">Parrot</option>
+                        <option value="spider">Spider</option>
+                    </select>
+                </div>
+            </nav>
         </aside>
         <header class="header">
             <div class="layout header__content text--small">
-                <div class="header__search"><input type="text" placeholder="Search" class="field field--header"></div>
-                <span class="icon icon header__icon-search"
-                    style="background-image: url('/svg/header/search.svg')"></span>
-                <span class="icon icon--header-settings"></span>
+                <div class="header__search relative">
+                    <input type="text" placeholder="Search" class="text field field--header">
+                    <span class="icon header__icon-search"
+                        style="background-image: url('/svg/header/search.svg')"></span>
+                    <span class="icon icon--header-settings icon--button icon--color-blue click"
+                        style="background-image: url('/svg/header/settings.svg')"></span>
+                </div>
             </div>
         </header>
-        <main class="main">Test</main>
+        <main class="main">
+            <div class="layout">
+                <section class="box analytic__block">
+                    <div class="analytic analytic--double analytic--blue">
+
+                        <span class="icon analytic__button icon--button icon--color-blue click"
+                            style="background-image: url('/svg/analytic/order.svg')"></span>
+                        <div class="relative vertical vertical--small">
+                            <div class="analytic__title text text--light">$961</div>
+                            <div class="text text--small text--gray">Total Order</div>
+                        </div>
+                    </div>
+                    <div class="analytic analytic--double ">test</div>
+                    <div class="analytic">
+                        <div>test</div>
+                        <div>test</div>
+                        <div>test</div>
+                    </div>
+                    <div class="analytic">
+                        <div>test</div>
+                        <div>test</div>
+                        <div>test</div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
     </div>
 
 </body>
