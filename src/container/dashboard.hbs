@@ -118,83 +118,154 @@
                         </div>
                     </section>
                 </div>
-
-                <div class='header__options'>
-                    <div class="col-12">
-                        <div class="form-label">
-                            Payment
-                        </div>
-                        <hr>
-                        <div class="form-check">
-                            <input name="payment" type="radio" class="form-check-input">
-                            <label class="form-check-label">Credit card</label>
-
-                        </div>
-                        <div class="form-check">
-                            <input name="payment" type="radio" class="form-check-input">
-                            <label class="form-check-label">Debit card</label>
-                        </div>
-                        <div class="form-check">
-                            <input name="payment" type="radio" class="form-check-input">
-                            <label class="form-check-label">PayPal</label>
-                        </div>
-                        <p></p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Name on card</label>
-                                    <input class="form-control">
+            </div>
+            <div class='layout'>
+                <section class='main2__block'>
+                    <div class='purchase__container'>
+                        <div class='box table-block'>
+                            <div class='text text--heading'>Purchase
+                                list
+                            </div>
+                            <div class='divider'></div>
+                            <div class='purchase-item'>
+                                <div class='purchase__item'>
+                                    <span class='text'>ID437661</span>
+                                    <span class='text'>May 11, 2023, 14:21</span>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Credit card number</label>
-                                    <input class="form-control">
+                                <div class='purchase__item'>
+                                    <span class='text'>AirOn ProCam</span>
+                                    <span class='text'>7/8 USB Type-C</span>
+                                </div>
+                                <div class='purchase__item'>
+                                    <span class='text'>132.32 EUR</span>
+                                    <span class='text text--warning'>Not
+                                        paid</span>
+                                </div>
+                                <div class='purchase__item'>
+                                    <span class='text'>Customer</span>
+                                    <span class='text'>robin@com.de</span>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="form-label">Expiration</label>
-                                    <input class="form-control">
+                            <div class='divider'></div>
+                            <div class='purchase-item'>
+                                <div class='purchase__item'>
+                                    <span class='text'>ID437661</span>
+                                    <span class='text'>May 11, 2023, 14:21</span>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">CVV</label>
-                                    <input class="form-control">
+                                <div class='purchase__item'>
+                                    <span class='text'>PHILIPS Essential</span>
+                                    <span class='text'>HD9200/90</span>
                                 </div>
+                                <div class='purchase__item'>
+                                    <span class='text'>543 USD</span>
+                                    <span class='text text--success'>Pay by
+                                        Stripe</span>
+                                </div>
+                                <div class='purchase__item'>
+                                    <span class='text'>Customer</span>
+                                    <span class='text'>dima@com.ua</span>
+                                </div>
+
                             </div>
-                        </div>
-                        <div>
-                            <hr>
-                        </div>
-                        <div class="col-12">
-                            <label class="form-label">Country</label>
-                            <br>
-                            <select class="form-select">
-                                <option selected>Choose...</option>
-                                <option value="1">Ukraine</option>
-                            </select>
-                            <br>
-                            <label class="form-label">State</label>
-                            <br>
-                            <select class="form-select">
-                                <option selected>Choose...</option>
-                                <option value="1">Kyiv</option>
-                                <option value="2">Kharkiv</option>
-                                <option value="3">Odesa</option>
-                                <option value="4">Dnipro</option>
-                                <option value="5">Vinnytsia</option>
-                            </select>
-                        </div>
-                        <div>
-                            <hr>
-                        </div>
-                        <div>
-                            <button class="btn btn-primary">Continue to checkout</button>
                         </div>
                     </div>
-                </div>
+                    <div class='box table-block'>
+                        <div class='text text--heading'>Payment</div>
+                        <div class='divider'></div>
+                        <div class='form-radio'>
+                            <div class='radio-item'>
+                                <input class='radio__input' checked type='radio' name='radio' id='credit'
+                                    value='credit' />
+                                <div class='radio__circle'></div>
+                                <label for='credit' class='text radio__label'>Credit card</label>
+                            </div>
+                            <div class='radio-item'>
+                                <input class='radio__input' type='radio' name='radio' id='debit' value='debit' />
+                                <div class='radio__circle'></div>
+                                <label for='debit' class='text radio__label'>Debit card</label>
+                            </div>
+                            <div class='radio-item'>
+                                <input class='radio__input' type='radio' name='radio' id='paypal' value='paypal' />
+                                <div class='radio__circle'></div>
+                                <label for='paypal' class='text radio__label'>PayPal</label>
+                            </div>
 
+                        </div>
+                        <div class='payment-block text text-dark'>
+                            <div class='payment__info'>
+                                <span>Name on card</span>
+                                <input type='text' class='field' />
+                            </div>
+                            <div class='payment__info'>
+                                <span>Credit card number</span>
+                                <input type='text' class='field' />
+                            </div>
+                            <div class='payment__info'>
+                                <span>Expiration</span>
+                                <input type='text' class='field' />
+                            </div>
+                            <div class='payment__info'>
+                                <span>CVV</span>
+                                <input type='text' class='field' />
+                            </div>
+                        </div>
+                        <div class='divider'></div>
+                        <div class='payment-block text text-dark'>
+                            <div class='payment__info'>
+                                <span>Country</span>
+                                <div class='relative click'>
+                                    <div class='field field--select'>
+                                        <span>Choose</span>
+                                    </div>
+                                    <span class='icon select__icon'
+                                        style="background-image: url('/svg/dashboard/payment/arrow.svg')"></span>
+                                    <select name='' id='' class='field__select'>
+                                        <option value='dog'>Ukraine</option>
+                                        <option value='cat'>Poland</option>
+                                        <option value='horse'>Finland</option>
+                                        <option value='mouse'>France</option>
+                                        <option value='hamster'>Italia</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class='payment__info'>
+                                <span>State</span>
+                                <div class='relative click'>
+                                    <div class='field field--select'>
+                                        <span>Choose</span>
+                                    </div>
+                                    <span class='icon select__icon'
+                                        style="background-image: url('/svg/dashboard/payment/arrow.svg')"></span>
+                                    <select name='' id='' class='field__select'>
+                                        <option value='dog'>Kharkivska</option>
+                                        <option value='cat'>Odesska</option>
+                                        <option value='horse'>Lvivska</option>
+                                        <option value='mouse'>Kyivska</option>
+                                        <option value='hamster'>Vinnytska</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='divider'></div>
+                        <div>
+                            <a href='#' class='button click'>
+                                <span class='text text--light'>Continue to
+                                    checkout</span>
+                            </a>
+                        </div>
+
+                    </div>
             </div>
+            </section>
+    </div>
 
-        </main>
+
+
+
+
+    </main>
     </div>
 
 </body>

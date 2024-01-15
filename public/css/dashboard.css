@@ -64,10 +64,11 @@ body {
     gap: var(--spacing-9);
     align-content: flex-start;
   }
-  .vertical {
+  .vertical--big {
     display: grid;
     gap: var(--spacing-5);
   }
+
   .aside {
     padding: var(--spacing-5);
     background-color: var(--color-background-dark);
@@ -396,6 +397,11 @@ body {
     background-color: var(--color-white);
     border: 1px solid #e0e4e8;
   }
+  .analytic--row {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
   .analytic__title--small {
     font-size: var(--size-3);
     font-weight: 500;
