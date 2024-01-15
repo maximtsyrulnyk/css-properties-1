@@ -21,9 +21,6 @@
         content='viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' />
     <link href='css/normalize.css' rel='stylesheet' />
     <link href='css/dashboard.css' rel='stylesheet' />
-    {{!--
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no"> --}}
 </head>
 
 <body>
@@ -33,7 +30,7 @@
             <div class="text aside__logo">
                 Sidebar
             </div>
-            <nav class="vertical vertical--small"><a href="#" class="nav-button nav-button--active click">
+            <nav class="vertical--big vertical"><a href="#" class="nav-button nav-button--active click">
                     <span class="icon nav-button__icon" style="background-image: url('/svg/nav/home.svg')"></span>
                     <span class="text text--light">Home</span>
                 </a>
@@ -50,7 +47,7 @@
             </nav>
         </aside>
         <header class="header">
-            <div class="layout header__content text--small">
+            <div class="layout header__content text text--small">
                 <div class="header__search relative">
                     <input type="text" placeholder="Search" class='field field--header'>
                     <span class="icon header__icon-search"
@@ -58,52 +55,70 @@
                     <span class="icon icon--header-settings icon--button icon--color-blue click"
                         style="background-image: url('/svg/header/settings.svg')"></span>
                 </div>
+                <div class="header__search relative">
+                    <span class="icon icon--header-settings icon--button icon--color-yellow click"
+                        style="background-image: url('/svg/header/signal.svg')"></span>
+                </div>
+                <div class="header__search relative">
+                    <span class="icon icon--header-settings icon--button icon--color-blue click"
+                        style="background-image: url('/svg/header/translate.svg')"></span>
+                </div>
+                <div class="header__search relative">
+                    <span class="icon icon--header-settings icon--button icon--color-yellow click"
+                        style="background-image: url('/svg/header/notification.svg')"></span>
+                </div>
             </div>
         </header>
         <main class="main">
             <div class="layout">
-                <section class="box analytic__block">
-                    <div class="analytic analytic--double analytic--purple">
+                <div class='analytic__container'>
+                    <section class="box analytic__block">
+                        <div class="analytic analytic--double analytic--purple">
 
-                        <span class="icon analytic__button icon--button icon--color-purple click"
-                            style="background-image: url('/svg/analytic/earning.svg')"></span>
-                        <div class="relative vertical vertical--small">
-                            <div class="analytic__title text text--light">$500.00</div>
-                            <div class="text text--small text--gray">Total Earning</div>
-                        </div>
-                    </div>
-
-                    <div class="analytic analytic--double analytic--blue">
-
-                        <span class="icon analytic__button icon--button icon--color-blue click"
-                            style="background-image: url('/svg/analytic/order.svg')"></span>
-                        <div class="relative vertical vertical--small">
-                            <div class="analytic__title text text--light">$961</div>
-                            <div class="text text--small text--gray">Total Order</div>
-                        </div>
-                    </div>
-                    <div style="display: flex;">
-                        <div class="analytic analytic--double analytic--blue">
-                            <span class="icon analytic__button icon--button icon--color-blue click"
+                            <span class="icon analytic__button icon--button icon--color-purple click"
                                 style="background-image: url('/svg/analytic/earning.svg')"></span>
-                            <div class="relative vertical vertical--small">
-                                <div class="analytic__title text text--light">$203k</div>
-                                <div class="text text--small text--gray">Total Income</div>
+                            <div class="relative vertical--big vertical">
+                                <div class="analytic__title text text--light">$500.00</div>
+                                <div class="text text--lighter">Total Earning</div>
+                                <span class='icon analytic__arrow'
+                                    style="background-image: url('/svg/analytic/arrow.svg')"></span>
                             </div>
                         </div>
-                    </div>
 
-                    <div style="display: flex;">
                         <div class="analytic analytic--double analytic--blue">
+
                             <span class="icon analytic__button icon--button icon--color-blue click"
-                                style="background-image: url('/svg/analytic/earning.svg')"></span>
-                            <div class="relative vertical vertical--small">
-                                <div class="analytic__title text text--light">$203k</div>
-                                <div class="text text--small text--gray">Total Income</div>
+                                style="background-image: url('/svg/analytic/order.svg')"></span>
+                            <div class="relative vertical--big vertical">
+                                <div class="analytic__title text text--light">$961</div>
+                                <div class="text text--lighter">Total Order</div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                        <div style="display: flex;">
+                            <div class='analytic analytic--row analytic--blue'>
+                                <span class="icon analytic__button icon--button icon--color-blue click"
+                                    style="background-image: url('/svg/analytic/income-active.svg')"></span>
+                                <div class="relative vertical--big vertical--small">
+                                    <div class="analytic__title--small  text text--light">$203k</div>
+                                    <div class="text text--small text--lighter">Total Income</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex;">
+                            <div class="analytic analytic--double analytic--black">
+                                <span class="icon analytic__button icon--button icon--color-yellow click"
+                                    style="background-image: url('/svg/analytic/shop.svg')"></span>
+                                <div class="relative vertical vertical--small">
+                                    <div class="analytic__title text text--black">$203k</div>
+                                    <div class="text text--small text--gray">Total Income</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
                 <div class='header__options'>
                     <div class="col-12">
                         <div class="form-label">
@@ -111,16 +126,68 @@
                         </div>
                         <hr>
                         <div class="form-check">
+                            <input name="payment" type="radio" class="form-check-input">
                             <label class="form-check-label">Credit card</label>
-                            <input name="payment" type="radio" class="form-check-input">
+
                         </div>
                         <div class="form-check">
+                            <input name="payment" type="radio" class="form-check-input">
                             <label class="form-check-label">Debit card</label>
-                            <input name="payment" type="radio" class="form-check-input">
                         </div>
                         <div class="form-check">
-                            <label class="form-check-label">PayPal</label>
                             <input name="payment" type="radio" class="form-check-input">
+                            <label class="form-check-label">PayPal</label>
+                        </div>
+                        <p></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Name on card</label>
+                                    <input class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Credit card number</label>
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Expiration</label>
+                                    <input class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">CVV</label>
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Country</label>
+                            <br>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="1">Ukraine</option>
+                            </select>
+                            <br>
+                            <label class="form-label">State</label>
+                            <br>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option value="1">Kyiv</option>
+                                <option value="2">Kharkiv</option>
+                                <option value="3">Odesa</option>
+                                <option value="4">Dnipro</option>
+                                <option value="5">Vinnytsia</option>
+                            </select>
+                        </div>
+                        <div>
+                            <hr>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary">Continue to checkout</button>
                         </div>
                     </div>
                 </div>
